@@ -13,23 +13,26 @@ class Student{
         $this->name=$name;
 
     }
-    public function setFee()
+    public function setFee($feePaid)
     {
-        return $this->feePaid;
+        $this->feePaid=$feePaid;
+        return $this->$feePaid;
     }
-    public function setCourse()
+    public function setCourse($course)
     {
-        return $this->course();
+        $this->course=$course;
+        return $this->$course;
     }
-    public function setAge(){
-        return $this->age();
+    public function setAge($age){
+        $this->age=$age;
+        return $this->$age;
     }
 }
 //creating an object
 $matildah=new Student('matildah mariwa');
-$matildah->setCourse="30";
-$matildah->setFee="1000";
-$matildah->setAge="28";
+$matildah->setCourse("jnsnasc");
+$matildah->setFee(1000);
+$matildah->setAge(28);
 
 var_dump($matildah);
 ?>
